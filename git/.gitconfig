@@ -1,0 +1,17 @@
+[user]
+	email = b.eslamifar@gmail.com
+	name = Behrad Eslamifar
+
+[color]
+    ui = true
+    diff = true
+[alias]
+    co = checkout
+    in = init
+    br = branch
+    st = status
+    ci = commit
+    fe = fetch
+    pu = pull
+[diff]
+    tool = vimdiff

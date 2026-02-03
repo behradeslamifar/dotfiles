@@ -15,3 +15,6 @@
     pu = pull
 [diff]
     tool = vimdiff
+
+[difftool]
+    prompt = false

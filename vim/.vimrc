@@ -41,3 +41,5 @@ set clipboard=unnamedplus
 set cursorcolumn
 syntax on
 set modeline
+
+nnoremap tt :execute 'botright ' . float2nr(&lines * 0.3) . 'new' <bar> terminal ++curwin ++close<CR>

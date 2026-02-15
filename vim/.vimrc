@@ -5,6 +5,16 @@ Plug 'mrk21/yaml-vim'
 Plug 'mattn/emmet-vim'
 Plug 'vim-scripts/groovy.vim'
 
+" Autocomplete
+Plug 'hrsh7th/nvim-cmp'
+Plug 'hrsh7th/cmp-nvim-lsp'
+
+" Treesitter (better syntax)
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+
+" Python formatter
+Plug 'psf/black'
+
 call plug#end()
 
 filetype off
@@ -27,12 +37,14 @@ let g:user_emmet_install_global = 0
 " set cindent       - stricter rules for C programs
 
 " set noswapfile
+" set signcolumn=yes
 
 if has("autocmd")
   autocmd Filetype go set ts=2 sw=2 sts=2 noet nolist autowrite number nosmd backspace=indent,eol,start cursorcolumn
   autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab indentkeys-=0# indentkeys-=<:> foldmethod=indent nofoldenable cursorcolumn
   autocmd FileType javascript setlocal foldmethod=syntax cursorcolumn
   autocmd FileType html,css EmmetInstall 
+  autocmd FileType python setlocal nocompatible tabstop=4 shiftwidth=4 expandtab autoindent smartindent clipboard=unnamedplus hidden updatetime=300 cursorcolumn
 endif
 
 set mouse-=a

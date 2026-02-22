@@ -7,6 +7,9 @@ Plug 'vim-scripts/groovy.vim'
 " Golang autocompletion
 Plug 'fatih/vim-go',  { 'do': ':GoUpdateBinaries' }
 Plug 'majutsushi/tagbar'
+Plug 'prabirshrestha/asyncomplete.vim'
+Plug 'prabirshrestha/asyncomplete-lsp.vim'
+"Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " Autocomplete
 Plug 'hrsh7th/nvim-cmp'
@@ -44,7 +47,7 @@ let g:go_code_completion_enabled = 1
 " set signcolumn=yes
 
 if has("autocmd")
-  autocmd Filetype go set ts=2 sw=2 sts=2 noet nolist autowrite number nosmd backspace=indent,eol,start cursorcolumn omnifunc=go#complete#Complete
+  autocmd Filetype go set ts=2 sw=2 sts=2 noet nolist autowrite number nosmd backspace=indent,eol,start cursorcolumn omnifunc=go#complete#Complete updatetime=200 completeopt=menu,menuone,noselect shortmess+=c
   autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab indentkeys-=0# indentkeys-=<:> foldmethod=indent nofoldenable cursorcolumn
   autocmd FileType javascript setlocal foldmethod=syntax cursorcolumn
   autocmd FileType html,css EmmetInstall 

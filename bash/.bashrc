@@ -24,3 +24,4 @@ export EDITOR=/usr/bin/vim
 complete -C /usr/local/bin/mc mc
 complete -C /usr/bin/terraform terraform
 
+bind 'set bell-style none'

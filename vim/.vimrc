@@ -3,6 +3,10 @@ call plug#begin('~/.vim/plugged')
 Plug 'mrk21/yaml-vim'
 Plug 'mattn/emmet-vim'
 Plug 'vim-scripts/groovy.vim'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
 
 " Golang autocompletion
 Plug 'fatih/vim-go',  { 'do': ':GoUpdateBinaries' }
@@ -30,6 +34,13 @@ filetype plugin indent on
 let mapleader=","
 let g:user_emmet_install_global = 0
 let g:go_code_completion_enabled = 1
+
+" vim-airline config
+"let g:airline_theme='murmur'
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#branch#enabled = 1
+let g:airline#extensions#hunks#enabled = 1
+let g:airline#extensions#tabline#enabled = 0
 
 " ts (tabstop) a <Tab> key will count as two spaces
 " sw (shiftwidth) identation and auto-identation will use two spaces (eg. when using >> or gg=G)

@@ -62,7 +62,7 @@ if has("autocmd")
   autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab indentkeys-=0# indentkeys-=<:> foldmethod=indent nofoldenable cursorcolumn
   autocmd FileType javascript setlocal foldmethod=syntax cursorcolumn
   autocmd FileType html,css EmmetInstall 
-  autocmd FileType python setlocal nocompatible tabstop=4 shiftwidth=4 expandtab autoindent smartindent clipboard=unnamedplus hidden updatetime=300 cursorcolumn
+  autocmd FileType python setlocal nocompatible tabstop=4 shiftwidth=4 expandtab autoindent nosmartindent clipboard=unnamedplus hidden updatetime=300 cursorcolumn
 endif
 
 set mouse-=a

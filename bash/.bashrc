@@ -13,6 +13,7 @@ source <(helm completion bash)
 source <(helm2 completion bash 2>/dev/null | sed 's/helm/helm2/g')
 source <(kind completion bash)
 source <(istioctl completion bash)
+complete -C /usr/bin/terraform terraform
 #complete -C /usr/local/go/bin/gocomplete go
 
 export GOPATH=$HOME/go export GOROOT=/usr/local/go
